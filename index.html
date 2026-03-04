@@ -5,26 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weekly Digital Marketing Roundup — High Jump Digital</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --hjd-orange: #FF6B35;
-      --hjd-dark: #1A1A2E;
-      --hjd-navy: #16213E;
-      --hjd-blue: #0F3460;
-      --hjd-light: #F8F9FA;
+      --hjd-cyan: #10C8F0;
+      --hjd-cyan-dark: #0EADD0;
+      --hjd-cyan-light: rgba(16, 200, 240, 0.12);
+      --hjd-dark: #090F14;
+      --hjd-dark-2: #0D1520;
+      --hjd-dark-3: #111C2A;
+      --hjd-dark-card: #0F1923;
       --hjd-white: #FFFFFF;
-      --hjd-gray: #6C757D;
-      --hjd-border: #E9ECEF;
-      --hjd-gradient: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+      --hjd-light-text: rgba(255,255,255,0.7);
+      --hjd-muted: rgba(255,255,255,0.45);
+      --hjd-border: rgba(16, 200, 240, 0.15);
+      --hjd-gradient: linear-gradient(135deg, #10C8F0 0%, #0EADD0 50%, #0C93B0 100%);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--hjd-light);
-      color: var(--hjd-dark);
+      background: #060A0E;
+      color: var(--hjd-white);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
@@ -32,68 +35,64 @@
     .email-wrapper {
       max-width: 680px;
       margin: 0 auto;
-      background: var(--hjd-white);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      background: var(--hjd-dark);
     }
 
     /* — Header — */
     .header {
       background: var(--hjd-dark);
-      padding: 40px 48px 36px;
+      padding: 48px 48px 44px;
       text-align: center;
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid var(--hjd-border);
     }
     .header::before {
       content: '';
       position: absolute;
-      top: -60%;
-      right: -20%;
-      width: 300px;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
       height: 300px;
-      background: var(--hjd-orange);
-      opacity: 0.08;
-      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(16, 200, 240, 0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .header::after {
-      content: '';
-      position: absolute;
-      bottom: -40%;
-      left: -10%;
-      width: 200px;
-      height: 200px;
-      background: var(--hjd-orange);
-      opacity: 0.05;
-      border-radius: 50%;
-    }
-    .logo-text {
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--hjd-orange);
-      margin-bottom: 16px;
+    .logo-svg {
+      margin-bottom: 28px;
       position: relative;
+    }
+    .logo-svg svg {
+      height: 18px;
+      width: auto;
     }
     .header h1 {
-      font-size: 32px;
-      font-weight: 800;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
       color: var(--hjd-white);
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 8px;
+      letter-spacing: -0.5px;
       position: relative;
     }
+    .header h1 span {
+      color: var(--hjd-cyan);
+    }
     .header .edition {
-      font-size: 14px;
-      color: rgba(255,255,255,0.5);
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 13px;
+      color: var(--hjd-muted);
       font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       position: relative;
     }
     .header .accent-bar {
       width: 60px;
-      height: 4px;
+      height: 3px;
       background: var(--hjd-gradient);
-      margin: 20px auto 0;
+      margin: 24px auto 0;
       border-radius: 2px;
       position: relative;
     }
@@ -101,16 +100,17 @@
     /* — Intro — */
     .intro {
       padding: 40px 48px 32px;
-      font-size: 16px;
-      color: var(--hjd-gray);
+      font-size: 15px;
+      color: var(--hjd-light-text);
       border-bottom: 1px solid var(--hjd-border);
     }
     .intro p {
       margin-bottom: 12px;
+      line-height: 1.7;
     }
     .greeting {
       font-weight: 600;
-      color: var(--hjd-dark);
+      color: var(--hjd-white);
     }
 
     /* — Section — */
@@ -125,92 +125,110 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      font-family: 'Chakra Petch', sans-serif;
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-weight: 600;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--hjd-orange);
-      margin-bottom: 12px;
+      color: var(--hjd-cyan);
+      margin-bottom: 14px;
     }
     .section-label .icon {
-      font-size: 16px;
+      font-size: 15px;
     }
     .section h2 {
+      font-family: 'Chakra Petch', sans-serif;
       font-size: 22px;
       font-weight: 700;
-      color: var(--hjd-dark);
-      margin-bottom: 16px;
+      color: var(--hjd-white);
+      margin-bottom: 20px;
       line-height: 1.3;
     }
 
     /* — News Card — */
     .news-card {
-      background: var(--hjd-light);
-      border-radius: 12px;
+      background: var(--hjd-dark-card);
+      border-radius: 8px;
       padding: 24px;
-      margin-bottom: 16px;
-      border-left: 4px solid var(--hjd-orange);
-      transition: transform 0.2s ease;
+      margin-bottom: 14px;
+      border-left: 3px solid var(--hjd-cyan);
+      transition: all 0.2s ease;
     }
     .news-card:hover {
-      transform: translateX(4px);
+      background: var(--hjd-dark-3);
+      border-left-color: var(--hjd-white);
     }
     .news-card:last-child {
       margin-bottom: 0;
     }
     .news-card h3 {
-      font-size: 17px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 16px;
       font-weight: 700;
-      color: var(--hjd-dark);
+      color: var(--hjd-white);
       margin-bottom: 8px;
       line-height: 1.4;
     }
     .news-card p {
       font-size: 14px;
-      color: var(--hjd-gray);
-      margin-bottom: 12px;
-      line-height: 1.6;
+      color: var(--hjd-light-text);
+      margin-bottom: 14px;
+      line-height: 1.7;
     }
     .news-tag {
       display: inline-block;
-      font-size: 11px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 10px;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       padding: 4px 10px;
-      border-radius: 4px;
-      background: rgba(255, 107, 53, 0.1);
-      color: var(--hjd-orange);
+      border-radius: 3px;
     }
-    .news-tag.seo { background: rgba(15, 52, 96, 0.1); color: var(--hjd-blue); }
-    .news-tag.ppc { background: rgba(255, 107, 53, 0.1); color: var(--hjd-orange); }
-    .news-tag.social { background: rgba(22, 33, 62, 0.1); color: var(--hjd-navy); }
-    .news-tag.ai { background: rgba(107, 53, 255, 0.1); color: #6B35FF; }
+    .news-tag.seo {
+      background: rgba(16, 200, 240, 0.12);
+      color: var(--hjd-cyan);
+    }
+    .news-tag.ppc {
+      background: rgba(240, 180, 16, 0.12);
+      color: #F0B410;
+    }
+    .news-tag.social {
+      background: rgba(100, 120, 240, 0.12);
+      color: #6478F0;
+    }
+    .news-tag.ai {
+      background: rgba(180, 100, 240, 0.12);
+      color: #B464F0;
+    }
 
     /* — Tip Box — */
     .tip-box {
-      background: linear-gradient(135deg, var(--hjd-dark) 0%, var(--hjd-navy) 100%);
-      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(16, 200, 240, 0.08) 0%, rgba(16, 200, 240, 0.03) 100%);
+      border: 1px solid var(--hjd-border);
+      border-radius: 8px;
       padding: 32px;
-      color: var(--hjd-white);
     }
     .tip-box .tip-label {
+      font-family: 'Chakra Petch', sans-serif;
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-weight: 600;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--hjd-orange);
+      color: var(--hjd-cyan);
       margin-bottom: 12px;
     }
     .tip-box h3 {
+      font-family: 'Chakra Petch', sans-serif;
       font-size: 20px;
       font-weight: 700;
+      color: var(--hjd-white);
       margin-bottom: 12px;
       line-height: 1.3;
     }
     .tip-box p {
       font-size: 14px;
-      color: rgba(255,255,255,0.75);
+      color: var(--hjd-light-text);
       line-height: 1.7;
     }
 
@@ -218,9 +236,10 @@
     .stats-bar {
       display: flex;
       gap: 0;
-      background: var(--hjd-light);
-      border-radius: 12px;
+      background: var(--hjd-dark-card);
+      border-radius: 8px;
       overflow: hidden;
+      border: 1px solid var(--hjd-border);
     }
     .stat {
       flex: 1;
@@ -230,9 +249,10 @@
     }
     .stat:last-child { border-right: none; }
     .stat-value {
+      font-family: 'Chakra Petch', sans-serif;
       font-size: 28px;
-      font-weight: 800;
-      color: var(--hjd-orange);
+      font-weight: 700;
+      color: var(--hjd-cyan);
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -241,77 +261,82 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: var(--hjd-gray);
+      color: var(--hjd-muted);
     }
 
     /* — CTA — */
     .cta-section {
-      padding: 40px 48px;
+      padding: 44px 48px;
       text-align: center;
-      background: var(--hjd-light);
+      background: var(--hjd-dark-2);
+      border-top: 1px solid var(--hjd-border);
     }
     .cta-button {
       display: inline-block;
       background: var(--hjd-gradient);
-      color: var(--hjd-white);
+      color: var(--hjd-dark);
       text-decoration: none;
-      font-size: 15px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 14px;
       font-weight: 700;
-      padding: 16px 40px;
-      border-radius: 8px;
-      letter-spacing: 0.5px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 16px 44px;
+      border-radius: 4px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
     }
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
+      box-shadow: 0 8px 32px rgba(16, 200, 240, 0.3);
     }
     .cta-sub {
       font-size: 13px;
-      color: var(--hjd-gray);
-      margin-top: 12px;
+      color: var(--hjd-muted);
+      margin-top: 14px;
     }
 
     /* — Footer — */
     .footer {
       background: var(--hjd-dark);
-      padding: 36px 48px;
+      padding: 40px 48px;
       text-align: center;
+      border-top: 1px solid var(--hjd-border);
     }
-    .footer-brand {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--hjd-orange);
-      margin-bottom: 12px;
+    .footer-logo svg {
+      height: 14px;
+      width: auto;
+      margin-bottom: 16px;
     }
     .footer p {
       font-size: 12px;
-      color: rgba(255,255,255,0.4);
+      color: var(--hjd-muted);
       margin-bottom: 4px;
     }
     .footer a {
-      color: rgba(255,255,255,0.6);
+      color: var(--hjd-light-text);
       text-decoration: none;
+      transition: color 0.2s ease;
     }
     .footer a:hover {
-      color: var(--hjd-orange);
+      color: var(--hjd-cyan);
     }
     .footer .social-links {
       margin-top: 16px;
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 24px;
     }
     .footer .social-links a {
-      font-size: 13px;
-      font-weight: 500;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
     .unsubscribe {
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hjd-border);
     }
 
     /* — Responsive — */
@@ -320,7 +345,7 @@
         padding-left: 24px;
         padding-right: 24px;
       }
-      .header h1 { font-size: 26px; }
+      .header h1 { font-size: 28px; }
       .stats-bar { flex-direction: column; }
       .stat { border-right: none; border-bottom: 1px solid var(--hjd-border); }
       .stat:last-child { border-bottom: none; }
@@ -333,9 +358,11 @@
 
   <!-- Header -->
   <div class="header">
-    <div class="logo-text">High Jump Digital</div>
-    <h1>Weekly Digital<br>Marketing Roundup</h1>
-    <div class="edition">Week of March 3, 2026 — Issue #01</div>
+    <div class="logo-svg">
+      <svg xmlns="http://www.w3.org/2000/svg" width="141" height="14" viewBox="0 0 141 14" fill="none"><g id="Group 8157"><path d="M79.4451 2.99174V0H76.413H66.4062H63.374V2.99174H76.413V10.5908H66.4062V5.29541H64.1594C63.7259 5.29541 63.374 5.64255 63.374 6.07027V9.49904C63.374 9.87717 63.4274 10.2437 63.5248 10.5908C63.9112 11.9677 65.0107 13.0526 66.4062 13.4338C66.7588 13.5299 67.1295 13.5826 67.5127 13.5826H75.3056C75.6889 13.5826 76.0603 13.5299 76.4122 13.4338C77.8077 13.0526 78.9072 11.9677 79.2936 10.5908C79.3909 10.2429 79.4443 9.87717 79.4443 9.49904V8.28715V5.29541V2.99174H79.4451Z" fill="#10C8F0"/><path d="M19.8889 0H22.1357V12.8077C22.1357 13.2354 21.7839 13.5826 21.3504 13.5826H19.1035V0.774862C19.1035 0.347138 19.4553 0 19.8889 0Z" fill="#10C8F0"/><path d="M28.2001 8.01905V2.99174H40.4537C40.8872 2.99174 41.2391 2.64461 41.2391 2.21688V0H31.2323H29.3067C28.9234 0 28.5528 0.0526906 28.2001 0.148774C26.8046 0.530006 25.7051 1.61481 25.3188 2.99174C25.2214 3.33966 25.168 3.70539 25.168 4.08352V9.49904C25.168 9.87717 25.2214 10.2437 25.3188 10.5908C25.7051 11.9677 26.8046 13.0526 28.2001 13.4338C28.5528 13.5299 28.9234 13.5826 29.3067 13.5826H41.2383V5.29541H31.2315V7.51229C31.2315 7.94001 31.5834 8.28715 32.0169 8.28715H38.2061V10.5908H28.1994V8.01828L28.2001 8.01905Z" fill="#10C8F0"/><path d="M16.0711 5.29541V0.774862C16.0711 0.347138 15.7193 0 15.2858 0H13.0389V5.29541H3.03218V0H0.785335C0.35183 0 0 0.347138 0 0.774862V12.8077C0 13.2354 0.35183 13.5826 0.785335 13.5826H3.03218V8.28715H13.0389V13.5826H15.2858C15.7193 13.5826 16.0711 13.2354 16.0711 12.8077V8.28715V5.29541Z" fill="#10C8F0"/><path d="M60.3416 5.29541V0.774862C60.3416 0.347138 59.9898 0 59.5563 0H57.3094V5.29541H47.3027V0H45.0558C44.6223 0 44.2705 0.347138 44.2705 0.774862V12.8077C44.2705 13.2354 44.6223 13.5826 45.0558 13.5826H47.3027V8.28715H57.3094V13.5826H59.5563C59.9898 13.5826 60.3416 13.2354 60.3416 12.8077V8.28715V5.29541Z" fill="#10C8F0"/><path d="M98.5486 0.774862C98.5486 0.347138 98.1968 0 97.7633 0H95.5165V10.5908H85.5097V0H83.2629C82.8294 0 82.4775 0.347138 82.4775 0.774862V9.49904C82.4775 9.87717 82.5309 10.2437 82.6283 10.5908C83.0147 11.9677 84.1142 13.0526 85.5097 13.4338C85.8623 13.5299 86.233 13.5826 86.6163 13.5826H94.4091C94.7924 13.5826 95.1638 13.5299 95.5157 13.4338C96.9112 13.0526 98.0107 11.9677 98.3971 10.5908C98.4945 10.2429 98.5479 9.87717 98.5479 9.49904V0.774862H98.5486Z" fill="#10C8F0"/><path d="M121.746 2.99174C121.359 1.61481 120.26 0.530006 118.864 0.148774C118.512 0.0526906 118.141 0 117.758 0H113.255H110.223H109.117H104.614H102.367C101.934 0 101.582 0.347138 101.582 0.774862V12.8077C101.582 13.2354 101.934 13.5826 102.367 13.5826H104.614V2.99174H110.224V12.8077C110.224 13.2354 110.576 13.5826 111.009 13.5826H113.256V2.99174H118.866V13.5826H121.113C121.546 13.5826 121.898 13.2354 121.898 12.8077V4.08352C121.898 3.70539 121.844 3.33888 121.747 2.99174H121.746Z" fill="#10C8F0"/><path d="M140.849 2.99174C140.463 1.61481 139.363 0.530006 137.968 0.148774C137.616 0.0526906 137.245 0 136.861 0H129.068H127.962H125.715C125.282 0 124.93 0.347138 124.93 0.774862V12.8077C124.93 13.2354 125.282 13.5826 125.715 13.5826H127.962V8.28715H136.861C137.245 8.28715 137.616 8.23446 137.968 8.13838C139.363 7.75715 140.463 6.67234 140.849 5.29541C140.947 4.9475 141 4.58176 141 4.20363V4.0843C141 3.70617 140.947 3.33966 140.849 2.99252V2.99174ZM137.968 5.29541H127.961V2.99174H137.968V5.29541Z" fill="#10C8F0"/></g></svg>
+    </div>
+    <h1>Weekly <span>Digital</span><br>Marketing Roundup</h1>
+    <div class="edition">Week of March 3, 2026 · Issue #01</div>
     <div class="accent-bar"></div>
   </div>
 
@@ -420,12 +447,14 @@
 
   <!-- Footer -->
   <div class="footer">
-    <div class="footer-brand">High Jump Digital</div>
+    <div class="footer-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="141" height="14" viewBox="0 0 141 14" fill="none"><g><path d="M79.4451 2.99174V0H76.413H66.4062H63.374V2.99174H76.413V10.5908H66.4062V5.29541H64.1594C63.7259 5.29541 63.374 5.64255 63.374 6.07027V9.49904C63.374 9.87717 63.4274 10.2437 63.5248 10.5908C63.9112 11.9677 65.0107 13.0526 66.4062 13.4338C66.7588 13.5299 67.1295 13.5826 67.5127 13.5826H75.3056C75.6889 13.5826 76.0603 13.5299 76.4122 13.4338C77.8077 13.0526 78.9072 11.9677 79.2936 10.5908C79.3909 10.2429 79.4443 9.87717 79.4443 9.49904V8.28715V5.29541V2.99174H79.4451Z" fill="#10C8F0"/><path d="M19.8889 0H22.1357V12.8077C22.1357 13.2354 21.7839 13.5826 21.3504 13.5826H19.1035V0.774862C19.1035 0.347138 19.4553 0 19.8889 0Z" fill="#10C8F0"/><path d="M28.2001 8.01905V2.99174H40.4537C40.8872 2.99174 41.2391 2.64461 41.2391 2.21688V0H31.2323H29.3067C28.9234 0 28.5528 0.0526906 28.2001 0.148774C26.8046 0.530006 25.7051 1.61481 25.3188 2.99174C25.2214 3.33966 25.168 3.70539 25.168 4.08352V9.49904C25.168 9.87717 25.2214 10.2437 25.3188 10.5908C25.7051 11.9677 26.8046 13.0526 28.2001 13.4338C28.5528 13.5299 28.9234 13.5826 29.3067 13.5826H41.2383V5.29541H31.2315V7.51229C31.2315 7.94001 31.5834 8.28715 32.0169 8.28715H38.2061V10.5908H28.1994V8.01828L28.2001 8.01905Z" fill="#10C8F0"/><path d="M16.0711 5.29541V0.774862C16.0711 0.347138 15.7193 0 15.2858 0H13.0389V5.29541H3.03218V0H0.785335C0.35183 0 0 0.347138 0 0.774862V12.8077C0 13.2354 0.35183 13.5826 0.785335 13.5826H3.03218V8.28715H13.0389V13.5826H15.2858C15.7193 13.5826 16.0711 13.2354 16.0711 12.8077V8.28715V5.29541Z" fill="#10C8F0"/><path d="M60.3416 5.29541V0.774862C60.3416 0.347138 59.9898 0 59.5563 0H57.3094V5.29541H47.3027V0H45.0558C44.6223 0 44.2705 0.347138 44.2705 0.774862V12.8077C44.2705 13.2354 44.6223 13.5826 45.0558 13.5826H47.3027V8.28715H57.3094V13.5826H59.5563C59.9898 13.5826 60.3416 13.2354 60.3416 12.8077V8.28715V5.29541Z" fill="#10C8F0"/><path d="M98.5486 0.774862C98.5486 0.347138 98.1968 0 97.7633 0H95.5165V10.5908H85.5097V0H83.2629C82.8294 0 82.4775 0.347138 82.4775 0.774862V9.49904C82.4775 9.87717 82.5309 10.2437 82.6283 10.5908C83.0147 11.9677 84.1142 13.0526 85.5097 13.4338C85.8623 13.5299 86.233 13.5826 86.6163 13.5826H94.4091C94.7924 13.5826 95.1638 13.5299 95.5157 13.4338C96.9112 13.0526 98.0107 11.9677 98.3971 10.5908C98.4945 10.2429 98.5479 9.87717 98.5479 9.49904V0.774862H98.5486Z" fill="#10C8F0"/><path d="M121.746 2.99174C121.359 1.61481 120.26 0.530006 118.864 0.148774C118.512 0.0526906 118.141 0 117.758 0H113.255H110.223H109.117H104.614H102.367C101.934 0 101.582 0.347138 101.582 0.774862V12.8077C101.582 13.2354 101.934 13.5826 102.367 13.5826H104.614V2.99174H110.224V12.8077C110.224 13.2354 110.576 13.5826 111.009 13.5826H113.256V2.99174H118.866V13.5826H121.113C121.546 13.5826 121.898 13.2354 121.898 12.8077V4.08352C121.898 3.70539 121.844 3.33888 121.747 2.99174H121.746Z" fill="#10C8F0"/><path d="M140.849 2.99174C140.463 1.61481 139.363 0.530006 137.968 0.148774C137.616 0.0526906 137.245 0 136.861 0H129.068H127.962H125.715C125.282 0 124.93 0.347138 124.93 0.774862V12.8077C124.93 13.2354 125.282 13.5826 125.715 13.5826H127.962V8.28715H136.861C137.245 8.28715 137.616 8.23446 137.968 8.13838C139.363 7.75715 140.463 6.67234 140.849 5.29541C140.947 4.9475 141 4.58176 141 4.20363V4.0843C141 3.70617 140.947 3.33966 140.849 2.99252V2.99174ZM137.968 5.29541H127.961V2.99174H137.968V5.29541Z" fill="#10C8F0"/></g></svg>
+    </div>
     <p>Your digital marketing partner in Bangkok & beyond</p>
     <div class="social-links">
+      <a href="https://www.highjumpdigital.com">Website</a>
       <a href="#">LinkedIn</a>
-      <a href="#">Twitter</a>
-      <a href="#">Website</a>
+      <a href="#">Facebook</a>
     </div>
     <div class="unsubscribe">
       <p>You're receiving this because you're a valued client of High Jump Digital.</p>
