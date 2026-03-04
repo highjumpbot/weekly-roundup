@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Digital Marketing Roundup — High Jump Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --hjd-orange: #FF6B35;
+      --hjd-dark: #1A1A2E;
+      --hjd-navy: #16213E;
+      --hjd-blue: #0F3460;
+      --hjd-light: #F8F9FA;
+      --hjd-white: #FFFFFF;
+      --hjd-gray: #6C757D;
+      --hjd-border: #E9ECEF;
+      --hjd-gradient: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--hjd-light);
+      color: var(--hjd-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .email-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--hjd-white);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+
+    /* — Header — */
+    .header {
+      background: var(--hjd-dark);
+      padding: 40px 48px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -60%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: var(--hjd-orange);
+      opacity: 0.08;
+      border-radius: 50%;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -10%;
+      width: 200px;
+      height: 200px;
+      background: var(--hjd-orange);
+      opacity: 0.05;
+      border-radius: 50%;
+    }
+    .logo-text {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--hjd-orange);
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--hjd-white);
+      line-height: 1.2;
+      margin-bottom: 8px;
+      position: relative;
+    }
+    .header .edition {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+      position: relative;
+    }
+    .header .accent-bar {
+      width: 60px;
+      height: 4px;
+      background: var(--hjd-gradient);
+      margin: 20px auto 0;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    /* — Intro — */
+    .intro {
+      padding: 40px 48px 32px;
+      font-size: 16px;
+      color: var(--hjd-gray);
+      border-bottom: 1px solid var(--hjd-border);
+    }
+    .intro p {
+      margin-bottom: 12px;
+    }
+    .greeting {
+      font-weight: 600;
+      color: var(--hjd-dark);
+    }
+
+    /* — Section — */
+    .section {
+      padding: 36px 48px;
+      border-bottom: 1px solid var(--hjd-border);
+    }
+    .section:last-of-type {
+      border-bottom: none;
+    }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--hjd-orange);
+      margin-bottom: 12px;
+    }
+    .section-label .icon {
+      font-size: 16px;
+    }
+    .section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--hjd-dark);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    /* — News Card — */
+    .news-card {
+      background: var(--hjd-light);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      border-left: 4px solid var(--hjd-orange);
+      transition: transform 0.2s ease;
+    }
+    .news-card:hover {
+      transform: translateX(4px);
+    }
+    .news-card:last-child {
+      margin-bottom: 0;
+    }
+    .news-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--hjd-dark);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .news-card p {
+      font-size: 14px;
+      color: var(--hjd-gray);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .news-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--hjd-orange);
+    }
+    .news-tag.seo { background: rgba(15, 52, 96, 0.1); color: var(--hjd-blue); }
+    .news-tag.ppc { background: rgba(255, 107, 53, 0.1); color: var(--hjd-orange); }
+    .news-tag.social { background: rgba(22, 33, 62, 0.1); color: var(--hjd-navy); }
+    .news-tag.ai { background: rgba(107, 53, 255, 0.1); color: #6B35FF; }
+
+    /* — Tip Box — */
+    .tip-box {
+      background: linear-gradient(135deg, var(--hjd-dark) 0%, var(--hjd-navy) 100%);
+      border-radius: 12px;
+      padding: 32px;
+      color: var(--hjd-white);
+    }
+    .tip-box .tip-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--hjd-orange);
+      margin-bottom: 12px;
+    }
+    .tip-box h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .tip-box p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+    }
+
+    /* — Stats Bar — */
+    .stats-bar {
+      display: flex;
+      gap: 0;
+      background: var(--hjd-light);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .stat {
+      flex: 1;
+      text-align: center;
+      padding: 24px 16px;
+      border-right: 1px solid var(--hjd-border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--hjd-orange);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--hjd-gray);
+    }
+
+    /* — CTA — */
+    .cta-section {
+      padding: 40px 48px;
+      text-align: center;
+      background: var(--hjd-light);
+    }
+    .cta-button {
+      display: inline-block;
+      background: var(--hjd-gradient);
+      color: var(--hjd-white);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
+    }
+    .cta-sub {
+      font-size: 13px;
+      color: var(--hjd-gray);
+      margin-top: 12px;
+    }
+
+    /* — Footer — */
+    .footer {
+      background: var(--hjd-dark);
+      padding: 36px 48px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--hjd-orange);
+      margin-bottom: 12px;
+    }
+    .footer p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 4px;
+    }
+    .footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: var(--hjd-orange);
+    }
+    .footer .social-links {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .footer .social-links a {
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .unsubscribe {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* — Responsive — */
+    @media (max-width: 640px) {
+      .header, .intro, .section, .cta-section, .footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .header h1 { font-size: 26px; }
+      .stats-bar { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid var(--hjd-border); }
+      .stat:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="email-wrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-text">High Jump Digital</div>
+    <h1>Weekly Digital<br>Marketing Roundup</h1>
+    <div class="edition">Week of March 3, 2026 — Issue #01</div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <!-- Intro -->
+  <div class="intro">
+    <p><span class="greeting">Hey {{first_name}},</span></p>
+    <p>Here's your weekly dose of what's moving the needle in digital marketing. We've cut through the noise so you don't have to — just the updates that actually matter for your business.</p>
+  </div>
+
+  <!-- SEO Section -->
+  <div class="section">
+    <div class="section-label"><span class="icon">🔍</span> Search & SEO</div>
+    <h2>What's New in Search</h2>
+
+    <div class="news-card">
+      <h3>Google's March 2026 Core Update Rolling Out</h3>
+      <p>Google has confirmed a broad core algorithm update beginning this week. Early data suggests a focus on content depth and E-E-A-T signals. Sites with thin content may see fluctuations over the next 2-3 weeks.</p>
+      <span class="news-tag seo">SEO</span>
+    </div>
+
+    <div class="news-card">
+      <h3>AI Overviews Now Showing for 40% of Queries</h3>
+      <p>Search Engine Land reports AI Overviews have expanded significantly, impacting organic CTR for informational queries. Featured snippet optimization is more critical than ever.</p>
+      <span class="news-tag ai">AI</span>
+    </div>
+  </div>
+
+  <!-- PPC Section -->
+  <div class="section">
+    <div class="section-label"><span class="icon">📊</span> Paid Advertising</div>
+    <h2>Google & Meta Ads Updates</h2>
+
+    <div class="news-card">
+      <h3>Google Ads Introduces Performance Max Insights 2.0</h3>
+      <p>New transparency features in PMax campaigns now show asset-level performance and audience segment breakdowns. Finally, better visibility into where your budget is actually going.</p>
+      <span class="news-tag ppc">Google Ads</span>
+    </div>
+
+    <div class="news-card">
+      <h3>Meta Advantage+ Creative Expands to All Ad Formats</h3>
+      <p>Meta's AI-powered creative optimization is now available across all placement types. Early adopters report 15-20% improvement in CPA when combined with broad targeting.</p>
+      <span class="news-tag social">Meta Ads</span>
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="section">
+    <div class="section-label"><span class="icon">📈</span> Industry Benchmarks</div>
+    <h2>Numbers This Week</h2>
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-value">$2.69</div>
+        <div class="stat-label">Avg. Google CPC</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">3.17%</div>
+        <div class="stat-label">Avg. FB CTR</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">↑ 12%</div>
+        <div class="stat-label">SEO Traffic YoY</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tip of the Week -->
+  <div class="section">
+    <div class="section-label"><span class="icon">💡</span> Pro Tip</div>
+    <h2>Tip of the Week</h2>
+    <div class="tip-box">
+      <div class="tip-label">🎯 Quick Win</div>
+      <h3>Audit Your Landing Page Load Speed</h3>
+      <p>Google's latest data shows that pages loading in under 2.5 seconds see 25% higher conversion rates than those above 4 seconds. Run your top 5 landing pages through PageSpeed Insights this week — low-hanging fruit that directly impacts your ROAS.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <a href="https://highjumpdigital.com" class="cta-button">Let's Talk Strategy →</a>
+    <p class="cta-sub">Need help implementing any of these insights? We're here.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-brand">High Jump Digital</div>
+    <p>Your digital marketing partner in Bangkok & beyond</p>
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">Website</a>
+    </div>
+    <div class="unsubscribe">
+      <p>You're receiving this because you're a valued client of High Jump Digital.</p>
+      <p><a href="#">Unsubscribe</a> · <a href="#">View in browser</a></p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
